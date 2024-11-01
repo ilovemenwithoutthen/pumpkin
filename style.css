@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee');
+
+/* Animations */
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}    
+
+@keyframes eyes {
+    0%{
+        margin-top: 10px;
+    }
+    100%{
+        border-bottom-color: yellow;
+        box-shadow: 0 10px 200px;
+        margin-top: 0;
+    }
+}    
+
+@keyframes mouth {
+    0%{
+        height: 50px;
+    }
+    100%{
+        height: 80px;
+        background-color: yellow;
+        box-shadow:insert 0 0 40px orangered;
+    }
+}  
+
+@keyframes letter {
+    0%{
+        letter-spacing: 0;
+    }
+    100%{
+        letter-spacing: 10px;
+    }
+}   
+
+@keyframes face {
+    0%{
+        margin: 0 40px;
+    }
+    100%{
+        margin: -20px 40px;
+    }
+}   
+
+
+body {
+    border-color: #030319;
+}
+
+.title {
+    margin: 0;
+    text-align: center;
+    color: orangered;
+    font-size: 80px;
+    font-family: 'Bungee', cursive;
+    animation: letter 1s infinite alternate;
+}
+
+.title span {
+    display:block;
+    font-size: 0.7em;
+    color: orange;
+    text-shadow: 0 5px #964527;
+}
+
+.lantern {
+    animation: zoom 1s infinite alternate;
+    width: 330px;
+    height: 280px;
+    background-color: orangered;
+    margin: 140px auto 30px;
+    border-width: 0 30px;
+    border-style: solid;
+    border-color: #ff6830;
+    border-radius: 100px;
+    position: relative;
+}
+
+.lantern:before,
+.lantern:after{
+    content: '';
+    width: 52px;
+    top: 0;
+    bottom: 0;
+    border: #000;
+    position: absolute;
+    left: -100px;
+    top: 0;
+    margin: 20px 0;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 2000px;
+    border-width: 0 0 0 20px;
+    
+}
